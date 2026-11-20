@@ -14,9 +14,12 @@ import {
 } from "lucide-react";
 const reviews = Array.from(
   { length: 8 },
-  (_, i) => `/reviews/review-${i + 1}.jpg`,
+  (_, i) => `${import.meta.env.BASE_URL}reviews/review-${i + 1}.jpg`,
 );
-const vibe = Array.from({ length: 4 }, (_, i) => `/vibe/vibe-${i + 1}.jpg`);
+const vibe = Array.from(
+  { length: 4 },
+  (_, i) => `${import.meta.env.BASE_URL}vibe/vibe-${i + 1}.jpg`,
+);
 const subjects = [
   {
     number: "01",
@@ -386,7 +389,7 @@ function App() {
               </div>
               <img
                 className="shalyapin-sticker"
-                src="/vibe/shalyapin.jpg"
+                src={`${import.meta.env.BASE_URL}vibe/shalyapin.jpg`}
                 alt="Шаляпин — мемный стикер"
               />
             </div>
